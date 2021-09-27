@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Phone } from 'src/app/interfaces/phone.interface';
+import { ServicesService } from 'src/app/service/services.service';
+
 
 @Component({
   selector: 'app-phones',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhonesComponent implements OnInit {
 
-  constructor() { }
+  arrPhones: Phone[]; // variable arrPhones donde vamos a introducir los Arrays de todos los teléfonos de la bbdd
 
-  ngOnInit(): void {
+
+  constructor(private serviceservice : ServicesService) {
+
+  }
+
+  async ngOnInit():Promise <void>{
+    const phones = await this.serviceservice.getAllPhones();
+    this.arrPhones = phones;
   }
 
 }

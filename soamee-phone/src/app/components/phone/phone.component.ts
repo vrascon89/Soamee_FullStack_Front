@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Phone } from 'src/app/interfaces/phone.interface';
+import { ServicesService } from 'src/app/service/services.service';
+
 
 @Component({
   selector: 'app-phone',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneComponent implements OnInit {
 
-  constructor() { }
+@Input() phone: Phone;
+
+  constructor(private serviceservice : ServicesService, private activateRoute : ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
   }
