@@ -15,9 +15,15 @@ export class PhoneComponent implements OnInit {
 
   constructor(private serviceservice : ServicesService, private activateRoute : ActivatedRoute) {
 
+
   }
 
   ngOnInit(): void {
+
+    this.activateRoute.params.subscribe(async(params)=>{
+      const idPhone = params.id;
+      this.phone = await this.serviceservice.getByIdPhone(idPhone);
+    })
   }
 
 }
