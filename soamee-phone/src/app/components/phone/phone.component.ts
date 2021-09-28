@@ -22,8 +22,8 @@ export class PhoneComponent implements OnInit {
 
     this.activateRoute.params.subscribe(async(params)=>{
       const idPhone = params.id;
-      this.phone = await this.serviceservice.getByIdPhone(idPhone);
-    })
+      this.phone = await this.serviceservice.getByIdPhone(idPhone)
+    });
   }
 
 }
