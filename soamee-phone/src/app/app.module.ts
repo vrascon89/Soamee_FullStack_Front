@@ -8,13 +8,15 @@ import { PhoneComponent } from './components/phone/phone.component';
 import { PhonesComponent } from './components/phones/phones.component';
 import { FormPhoneComponent } from './components/forms/form-phone/form-phone.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NavComponent } from './components/forms/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhoneComponent,
     PhonesComponent,
-    FormPhoneComponent
+    FormPhoneComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
