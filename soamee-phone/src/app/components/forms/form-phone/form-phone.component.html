@@ -1,1 +1,44 @@
-<p>form-phone works!</p>
+<div class="container">
+  <h1 class="mt-3 d-flex justify-content-center">Add a new Phone</h1>
+  <div class="row d-flex justify-content-center">
+      <form class="mt-3 col-7" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Manufacturer</label>
+            <input type="text" class="form-control" formControlName="manufacturer">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="textarea" class="form-control" formControlName="description">
+          </div>
+        <div class="mb-3">
+          <label class="form-label">Color</label>
+          <input type="text" class="form-control" formControlName="color">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input type="number" class="form-control" formControlName="price">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Image</label>
+          <input type="text" class="form-control" formControlName="imagenFileName">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Screen</label>
+          <input type="text" class="form-control" formControlName="screen">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Processor</label>
+          <input type="text" class="form-control" formControlName="processor">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ram</label>
+          <input type="text" class="form-control" formControlName="ram">
+        </div>
+          <button class="mt-3 btn btn-outline-primary">Add Phone</button>
+      </form>
+  </div>
+</div>
