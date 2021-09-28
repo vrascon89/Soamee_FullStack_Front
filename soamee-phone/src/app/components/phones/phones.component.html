@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+      <h1 class="my-4 d-flex justify-content-center">Phone Store</h1>
+      <div class="col-4 m-2 btn" style="max-width: 18rem;" *ngFor="let phone of arrPhones"
+          [routerLink]="['/book', phone.id]">
+          <div class="card border-primary my-3 d-flex justify-content-center" style="max-width: 18rem;">
+              <div class="card-body text-dark">
+                  <h5 class="card-title">{{phone.name}}</h5>
+                  <p>Manufacturer: {{phone.manufacturer}}</p>
+                  <p>Description: {{phone.description}}</p>
+                  <p>Color: {{phone.color}}</p>
+                  <p>Price: {{phone.price}}</p>
+                  <img [src]="phone.imageFileName" alt="">
+                  <p>Screen: {{phone.screen}}</p>
+                  <p>Processor: {{phone.processor}}</p>
+                  <p>RAM: {{phone.ram}}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
